@@ -6,12 +6,51 @@
     <body>
 
         <h1>Haitham's Webpage.</h1>
-        <h2>Below is a link for a few breath-taking landscapes from Morocco!</h2>
+        <h2>Here are the pictures! (a form is available below!)</h2>
         <div>
         <p><a href="./index.html">Click here</a> to go back.</p>
         <img src="./Images/Caravan.jpg" alt="">
         <img src="./Images/explore-morocco-1600x690.jpg" alt="">
         </div>
 
+
+        <h2>Here are a few questions!</h2>
+        <div>
+            <form>
+                <form>
+                <label for="fname" required>First name</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname" required>Last name</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="fname" required>Your age</label><br>
+                <input type="text" id="age" name="age" pattern="[0-9]{2}" title="Your age"><br>
+            </form>
+            <br>
+            <p>Now, if you were to explore the desert, what time would you want to go?</p>
+
+                <label for="time">Choose a time of day:</label>
+                <select id="time" name="time">
+                    <option value="dawn">Dawn</option>
+                    <option value="morning">Morning</option>
+                    <option value="noon" selected>Noon</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <option value="sunset">Sunset</option>
+                    <option value="night">Night</option>
+                </select>             
+                <br><br><br>
+                
+                <p>Also, what rating would you give to a desert trip?</p>
+                <form>
+                    0/10
+                    <input type="range" id="a" name="a" value="50">
+                    10/10
+                    <br><br>
+                    <input type="submit">
+                </form>
+                
+                
+                <br><br><br>
+        </div>
     </body>
 </html>
