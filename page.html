@@ -2,13 +2,27 @@
 <html>
     <head>
         <title>Haitham's Webpage.</title>
+        
+        <script>
+           function mousemoved() {document.getElementById('title_thing').innerHTML = 'This page now comes with JavaScript';}
+		</script>
+
+        
+
     </head>
     <body>
 
         <h1>Haitham's Webpage.</h1>
-        <h2>Here are the pictures! (a form is available below!)</h2>
+        <div id="title_thing" onmousemove="mousemoved()">Move your cursor over me.</div>
+        <h4 id="title_thing">Here are the pictures! (a form is available below)</h4>
+        </div>
         <div>
         <p><a href="./index.html">Click here</a> to go back.</p>
+
+
+            <button onclick="window.alert('Trivago')">Hotel?</button>
+
+
         <img src="./Images/Caravan.jpg" alt="">
         <img src="./Images/explore-morocco-1600x690.jpg" alt="">
         </div>
