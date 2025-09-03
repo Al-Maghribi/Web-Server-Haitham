@@ -5,6 +5,20 @@
         
         <script>
            function mousemoved() {document.getElementById('title_thing').innerHTML = 'This page now comes with JavaScript';}
+           
+           function disappear() {
+                var x = document.getElementById("camel");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            function imgchanger() {
+                document.getElementById("desert").src = "./Images/morocco-ian-neubauer.jpg";
+            }
+           
 		</script>
 
         
@@ -15,16 +29,21 @@
         <h1>Haitham's Webpage.</h1>
         <div id="title_thing" onmousemove="mousemoved()">Move your cursor over me.</div>
         <h4 id="title_thing">Here are the pictures! (a form is available below)</h4>
-        </div>
         <div>
         <p><a href="./index.html">Click here</a> to go back.</p>
 
 
             <button onclick="window.alert('Trivago')">Hotel?</button>
+            <br><br>
+            <button onclick="disappear()">Toggle the bottom picture.</button>
+            <br><br>
 
 
-        <img src="./Images/Caravan.jpg" alt="">
-        <img src="./Images/explore-morocco-1600x690.jpg" alt="">
+        <img id="camel" src="./Images/Caravan.jpg" alt="">
+        <br><br>
+        <button onclick="imgchanger()">Change the bottom image!</button>
+        <br><br>
+        <img id="desert" src="./Images/explore-morocco-1600x690.jpg" alt="">
         </div>
 
 
