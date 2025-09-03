@@ -4,14 +4,19 @@
         <title>Haitham's Webpage.</title>
         
         <script>
-           function mousemoved() {document.getElementById('title_thing').innerHTML = 'This page now comes with JavaScript';}
+           function updatetitle(state) {
+                document.getElementById("title_thing").innerHTML = "Haitham’s Webpage, Now with JavaScript!";
+                state.innerHTML = "Show the bottom picture"
+                }
            
-           function disappear() {
+           function disappear(btn) {
                 var x = document.getElementById("camel");
                 if (x.style.display === "none") {
                     x.style.display = "block";
+                    btn.innerHTML = "Hide the bottom picture.";
                 } else {
                     x.style.display = "none";
+                    btn.innerHTML = "Show the bottom picture";
                 }
             }
 
@@ -26,16 +31,17 @@
     </head>
     <body>
 
-        <h1>Haitham's Webpage.</h1>
-        <div id="title_thing" onmousemove="mousemoved()">Move your cursor over me.</div>
-        <h4 id="title_thing">Here are the pictures! (a form is available below)</h4>
+        <h1 id="title_thing">Haitham’s Webpage.</h1>
+            <button onclick="updatetitle()">Update the Title</button>
+        <br>
+        <h4>Here are the pictures! (a form is available below)</h4>
         <div>
         <p><a href="./index.html">Click here</a> to go back.</p>
 
 
             <button onclick="window.alert('Trivago')">Hotel?</button>
             <br><br>
-            <button onclick="disappear()">Toggle the bottom picture.</button>
+            <button id="onoff" onclick="disappear(this)">Hide the bottom picture.</button>
             <br><br>
 
 
