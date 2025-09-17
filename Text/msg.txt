@@ -1,0 +1,1 @@
+This sentence is inside a file used by JavaScript using fetch.

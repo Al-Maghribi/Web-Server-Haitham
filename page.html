@@ -30,13 +30,21 @@
                     errorElement.innerHTML = "This field is required";
                 } else {
                     errorElement.innerHTML = "";
+                }          
             }
-}
            
+             async function getText(file) {
+                let myObject = await fetch(file);
+                let myText = await myObject.text();
+                myDisplay(myText);
+            } 
+
+            function myDisplay(content) {
+                document.getElementById("output").innerText = content;
+            }
+
+
 		</script>
-
-        
-
     </head>
     <body>
 
@@ -48,10 +56,13 @@
         <p><a href="./index.html">Click here</a> to go back.</p>
 
 
-            <button onclick="window.alert('Trivago')">Hotel?</button>
-            <br><br>
-            <button id="onoff" onclick="disappear(this)">Hide the bottom picture.</button>
-            <br><br>
+        <button onclick="window.alert('Trivago')">Hotel?</button>
+        <br><br>
+        <button onclick="getText('./Text/msg.txt')">JavaScript Fetch Button</button>
+        <div id="output">[Fetch text here]</div>
+        <br><br>
+        <button id="onoff" onclick="disappear(this)">Hide the bottom picture.</button>
+        <br><br>
 
 
         <img id="camel" src="./Images/Caravan.jpg" alt="">
