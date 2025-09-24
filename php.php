@@ -4,7 +4,6 @@
     </head>
 
     <body>
-        <p><?= $_SERVER[‘HTTP_USER_AGENT’] ?></p>
-        <p><?= echo $_SERVER ?></p>
+        <p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
     </body>
 </html>
