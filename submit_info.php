@@ -21,13 +21,6 @@
 
             $result = mysqli_query($conn, $sql);
 
-
-            if ($result) {
-                echo "Record inserted successfully!";
-            } else {
-                echo "Error: " . mysqli_error($conn);
-            }
-
             mysqli_close($conn);
         ?>
 
