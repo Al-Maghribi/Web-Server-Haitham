@@ -76,7 +76,7 @@
 
         <h2>Here are a few questions!</h2>
         <div>
-            <form action="form1.php" method="post">
+            <form action="submit_info.php" method="post">
                 <label for="fname" required>First name</label><br>
                 <input type="text" id="fname" name="fname" onblur="validateField(this, 'fnameErr')"><br>
                 <span id="fnameErr" class="error">This field is required</span>
@@ -85,12 +85,19 @@
                 <input type="text" id="lname" name="lname" onblur="validateField(this, 'lnameErr')"><br>
                 <span id="lnameErr" class="error">This field is required</span>
                 <br><br>
-                <label for="fname" required>Your age</label><br>
-                <input type="text" id="age" name="age" pattern="[0-9]{2}" title="Your age" onblur="validateField(this, 'ageErr')"><br>
+                <label for="age" required>Your age</label><br>
+                <input type="number" id="age" name="age" pattern="[0-9]{2}" title="Your age" onblur="validateField(this, 'ageErr')"><br>
                 <span id="ageErr" class="error">This field is required</span>
                 <br>
                 <p><input type="submit" /></p>
-            
+            </form>
+
+            <form action="from_server.php" method="post">
+                    Search for first name: <input type="text" name="fname">
+                    <input type="submit" value="Search">
+            </form>
+
+            <form>
                 <br><br>
                 <p>Now, if you were to explore the desert, what time would you want to go?</p>
 

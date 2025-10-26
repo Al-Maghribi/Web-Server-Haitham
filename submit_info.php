@@ -9,11 +9,15 @@
             $database = "userinfo";
             $conn = mysqli_connect($server, $username, $password, $database);
             
-            // Check for successful connection
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "INSERT INTO info (fname, lname, age) VALUES ('Hermione', 'Granger', 16);";
+            
+            $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+            $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+            $age = (int) $_POST['age'];
+            
+            $sql = "INSERT INTO info (first_name, last_name, age) VALUES ('$fname', '$lname', $age);";
 
             $result = mysqli_query($conn, $sql);
         ?>
@@ -21,7 +25,7 @@
     </head>
 
     <body>
-        <p>Your name is <?= htmlspecialchars($_POST['fname']) . " " . htmlspecialchars($_POST['lname'])?>.</p>
-        <p>You are <?= htmlspecialchars($_POST['age'])?> years old.</p>
+        mysqli_close($conn);
     </body>
+   
 </html>
