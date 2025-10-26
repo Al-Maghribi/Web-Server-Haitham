@@ -20,12 +20,20 @@
             $sql = "INSERT INTO info (first_name, last_name, age) VALUES ('$fname', '$lname', $age);";
 
             $result = mysqli_query($conn, $sql);
+
+
+            if ($result) {
+                echo "Record inserted successfully!";
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
         ?>
 
     </head>
 
     <body>
         mysqli_close($conn);
+        
     </body>
    
 </html>

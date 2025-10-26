@@ -25,6 +25,8 @@
             while ($row = mysqli_fetch_assoc($result)) {
             echo $row['first_name'] . " " . $row['last_name'] . " (" . $row['age'] . ")<br>";
             }
+
+            mysqli_close($conn);
         ?>
     </body>
 </html>
