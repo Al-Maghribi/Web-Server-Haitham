@@ -26,5 +26,6 @@
 
     </head>
     <body>
+        <p>The information has been submitted successfully!</p>
     </body>
 </html>
