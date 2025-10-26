@@ -27,13 +27,11 @@
             } else {
                 echo "Error: " . mysqli_error($conn);
             }
+
+            mysqli_close($conn);
         ?>
 
     </head>
-
     <body>
-        mysqli_close($conn);
-        
     </body>
-   
 </html>
