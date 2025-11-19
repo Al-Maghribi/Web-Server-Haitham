@@ -42,14 +42,22 @@
             function myDisplay(content) {
                 document.getElementById("output").innerText = content;
             }
-
 		</script>
     </head>
     <body>
 
         <h1 id="title_thing">Haitham&#39;s Webpage.</h1>
             <button onclick="updatetitle()">Update the Title</button>
+        <br><br><br>
+        <h2>To control the LED:</h2>
+        <form action="led.php" method="post">
+            <button type="submit" name="state" value="on">Turn LED ON</button>
+            <button type="submit" name="state" value="off">Turn LED OFF</button>
+            <button type="submit" name="state" value="toggle">Toggle LED</button>
+        </form>
+
         <br>
+
         <h4>Here are the pictures! (a form is available below)</h4>
         <div>
         <p><a href="./index.html">Click here</a> to go back.</p>
