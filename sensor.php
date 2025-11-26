@@ -15,5 +15,15 @@
         <p> <?php echo "Temperature: $temp °C"; ?> </p>
         <p> <?php echo "Pressure: $pressure hPa"; ?> </p>
         <p> <?php echo "Altitude: $altitude m"; ?> </p>
+
+
+        <p><<?php
+echo "User: " . shell_exec("whoami") . "<br>";
+$raw = shell_exec("pwd");
+echo "PWD: $raw<br>";
+$raw = shell_exec("./bme280 2>&1"); // capture errors
+var_dump($raw);
+?>/p>
+        
     </body>
 </html>
