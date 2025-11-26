@@ -9,7 +9,6 @@
             $pressure = $deserialized["pressure"];
             $altitude = $deserialized["altitude"];
         ?>
-
     </head>
     <body>
         <p> <?php echo "Temperature: $temp °C"; ?> </p>
