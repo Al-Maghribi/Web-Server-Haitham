@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sensor Page</title>
+        <title>LED Page</title>
         <?php
             $LED_status = isset($_POST['state']) ? $_POST['state'] : '';
 

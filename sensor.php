@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LED Page</title>
+        <title>Sensor Page</title>
         <?php
             $raw = shell_exec("./bme280");
             $deserialized = json_decode($raw, true);
