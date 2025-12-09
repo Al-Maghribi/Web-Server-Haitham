@@ -43,17 +43,19 @@
                 document.getElementById("output").innerText = content;
             }
 
-            async function fetchData(apiKey) {
-                const response = await fetch('https://api.stm.info/pub/od/i3/v2/messages', {
-                    headers: {
-                        'apikey': apiKey
-                    }
-                });
-
-                const data = await response.json();
-                return data;
-
+            async function fetchFunFact() {
+                try {
+                    const response = await fetch('https://asli-fun-fact-api.herokuapp.com/');
+                    const data = await response.json();
+                    document.getElementById('fun-fact').innerText = data.data.fact;
+                } catch (err) {
+                    console.error('Error fetching fun fact:', err);
+                    document.getElementById('fun-fact').innerText = 'Error fetching data';
+                }
             }
+
+            fetchFunFact()
+            setInterval(fetchFunFact, 5000);
 
 		</script>
     </head>
@@ -89,10 +91,6 @@
         <br><br>
         <button onclick="getText('./Text/msg.txt')">JavaScript Fetch Button</button>
         <div id="output">[Fetch text here]</div>
-
-        <br><br>
-        <button onclick="fetchData('l70b2e22f9786e4d8e90accab95a4d85af')">STM Button</button>
-
 
         <br><br>
         <button id="onoff" onclick="disappear(this)">Hide the bottom picture.</button>
