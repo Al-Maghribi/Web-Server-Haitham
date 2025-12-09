@@ -46,7 +46,7 @@
             async function fetchData(apiKey) {
                 const response = await fetch('https://api.stm.info/pub/od/i3/v2/messages', {
                     headers: {
-                        'l70b2e22f9786e4d8e90accab95a4d85af': apiKey
+                        'apikey': apiKey
                     }
                 });
 
@@ -91,7 +91,7 @@
         <div id="output">[Fetch text here]</div>
 
         <br><br>
-        <button onclick="fetchData()">STM Button</button>
+        <button onclick="fetchData('l70b2e22f9786e4d8e90accab95a4d85af')">STM Button</button>
 
 
         <br><br>
