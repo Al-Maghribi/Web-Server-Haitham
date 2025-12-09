@@ -45,9 +45,10 @@
 
             async function fetchFunFact() {
                 try {
-                    const response = await fetch('https://asli-fun-fact-api.herokuapp.com/');
+                    const response = await fetch('https://uselessfacts.jsph.pl/random.json?language=en');
+                    
                     const data = await response.json();
-                    document.getElementById('fun-fact').innerText = data.data.fact;
+                    document.getElementById('fun-fact').innerText = data.text;
                 } catch (err) {
                     console.error('Error fetching fun fact:', err);
                     document.getElementById('fun-fact').innerText = 'Error fetching data';
