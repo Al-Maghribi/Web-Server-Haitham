@@ -24,7 +24,7 @@
         ?>
 
     <script>
-        location.replace("https://www.w3schools.com")
+        location.replace("https://www.google.com/search?q="$searchterm)
     </script>
 
     </head>
