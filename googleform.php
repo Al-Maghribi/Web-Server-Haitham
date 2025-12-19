@@ -21,12 +21,10 @@
             $result = mysqli_query($conn, $sql);
 
             mysqli_close($conn);
+
+            header("https://www.google.com/search?q=" . $googlesearch);
         ?>
-
-    <script>
-        location.replace("https://www.google.com/search?q="+$googlesearch);
-    </script>
-
+        
     </head>
     <body>
         <p>The information has been submitted successfully!</p>
