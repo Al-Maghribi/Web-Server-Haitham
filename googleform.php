@@ -13,7 +13,7 @@
               die("Connection failed: {mysqli_connect_error()}");
             }
                         
-            $searchterm = mysqli_real_escape_string($conn, $_POST['fname']);
+            $searchterm = mysqli_real_escape_string($conn, $_POST['googlesearch']);
             $ip = $_SERVER["REMOTE_ADDR"];
             
             $sql = "INSERT INTO googleip (searchterm, ip) VALUES ('$searchterm', '$ip');";
