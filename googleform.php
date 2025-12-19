@@ -23,6 +23,10 @@
             mysqli_close($conn);
         ?>
 
+    <script>
+        location.replace("https://www.w3schools.com")
+    </script>
+
     </head>
     <body>
         <p>The information has been submitted successfully!</p>
