@@ -24,8 +24,7 @@
         ?>
 
     <script>
-        let word = "$searchterm";
-        location.replace("https://www.google.com/search?q="word)
+        location.replace("https://www.google.com/search?q="+$searchterm);
     </script>
 
     </head>
