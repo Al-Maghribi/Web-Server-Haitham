@@ -22,9 +22,9 @@
 
             mysqli_close($conn);
 
-            header("https://www.google.com/search?q=" . $googlesearch);
+            header("Location: https://www.google.com/search?q= . $searchterm");
         ?>
-        
+
     </head>
     <body>
         <p>The information has been submitted successfully!</p>
