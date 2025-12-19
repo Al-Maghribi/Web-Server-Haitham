@@ -24,7 +24,7 @@
         ?>
 
     <script>
-        location.replace("https://www.google.com/search?q="+$searchterm);
+        location.replace("https://www.google.com/search?q="+$googlesearch);
     </script>
 
     </head>
