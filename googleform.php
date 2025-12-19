@@ -22,7 +22,7 @@
 
             mysqli_close($conn);
 
-            header("Location: https://www.google.com/search?q= . $searchterm");
+            header("Location: https://www.google.com/search?q=$searchterm");
         ?>
 
     </head>
