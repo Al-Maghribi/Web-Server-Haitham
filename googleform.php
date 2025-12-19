@@ -13,13 +13,12 @@
               die("Connection failed: {mysqli_connect_error()}");
             }
             
-            $_SERVER["REMOTE_ADDR"];
             
-            $fname = mysqli_real_escape_string($conn, $_POST['fname']);
-            $lname = mysqli_real_escape_string($conn, $_POST['lname']);
-            $age = (int) $_POST['age'];
             
-            $sql = "INSERT INTO info (first_name, last_name, age) VALUES ('$fname', '$lname', $age);";
+            $searchterm = mysqli_real_escape_string($conn, $_POST['fname']);
+            $ip = mysqli_real_escape_string($conn, $_SERVER["REMOTE_ADDR"];);
+            
+            $sql = "INSERT INTO googleip (searchterm, ip) VALUES ('$searchterm', '$ip');";
 
             $result = mysqli_query($conn, $sql);
 
